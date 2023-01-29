@@ -1,0 +1,364 @@
+<!-- Page Content -->
+<div class="content container-fluid">
+
+  <!-- Page Header -->
+  <div class="page-header">
+      <div class="row">
+          <div class="col-sm-12">
+              <h3 class="page-title" *ngIf="!id">New Nibedon Form</h3>
+
+              <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active">New Nibdeon Form</li>
+
+              </ul>
+          </div>
+      </div>
+  </div>
+  <!-- /Page Header -->
+
+  <div class="row">
+      <div class="col-sm-12">
+          <form [formGroup]="">
+              <div class="row">
+
+
+                <div class="col-sm-6 col-md-3">
+                  <div class="form-group">
+                      <label>Name</label>
+                      <input class="form-control" type="email" name="email" [class.invalid]=""
+                      formControlName="email">
+                      <div
+                      *ngIf="">
+                      <small
+                          *ngIf="('email').invalid && ('email').touched"
+                          class="text-danger"> *Email is required</small>
+                  </div>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-3">
+                <div class="form-group">
+                    <label>Mobile Number</label>
+                    <input class="form-control" type="email" name="email" [class.invalid]=""
+                    formControlName="email">
+                    <div
+                    *ngIf="">
+                    <small
+                        *ngIf="('email').invalid && ('email').touched"
+                        class="text-danger"> *Email is required</small>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <div class="form-group">
+                  <label>Alternate Mobile Number</label>
+                  <input class="form-control" type="email" name="email" [class.invalid]=""
+                  formControlName="email">
+                  <div
+                  *ngIf="">
+                  <small
+                      *ngIf="('email').invalid && ('email').touched"
+                      class="text-danger"> *Email is required</small>
+              </div>
+              </div>
+          </div>
+          <div class="col-sm-6 col-md-3">
+            <div class="form-group">
+                <label>Family Code</label>
+                <input class="form-control" type="email" name="email" [class.invalid]=""
+                formControlName="email">
+                <div
+                *ngIf="">
+                <small
+                    *ngIf="('email').invalid && ('email').touched"
+                    class="text-danger"> *Email is required</small>
+            </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <div class="form-group">
+              <label>Age</label>
+              <input class="form-control" type="email" name="email" [class.invalid]=""
+              formControlName="email">
+              <div
+              *ngIf="">
+              <small
+                  *ngIf="('email').invalid && ('email').touched"
+                  class="text-danger"> *Email is required</small>
+          </div>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="form-group">
+            <label>Gender</label>
+            <input class="form-control" type="email" name="email" [class.invalid]=""
+            formControlName="email">
+            <div
+            *ngIf="">
+            <small
+                *ngIf="('email').invalid && ('email').touched"
+                class="text-danger"> *Email is required</small>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="form-group">
+          <label>Proxy Caller Name</label>
+          <input class="form-control" type="email" name="email" [class.invalid]=""
+          formControlName="email">
+          <div
+          *ngIf="">
+          <small
+              *ngIf="('email').invalid && ('email').touched"
+              class="text-danger"> *Email is required</small>
+      </div>
+      </div>
+  </div>
+  <div class="col-sm-6 col-md-3">
+    <div class="form-group">
+        <label>Proxy Caller Relationship</label>
+        <input class="form-control" type="email" name="email" [class.invalid]=""
+        formControlName="email">
+        <div
+        *ngIf="">
+        <small
+            *ngIf="('email').invalid && ('email').touched"
+            class="text-danger"> *Email is required</small>
+    </div>
+    </div>
+</div>
+<div class="col-sm-6 col-md-3">
+  <div class="form-group">
+      <label>Is Proxy Caller Initiated?</label>
+      <input class="form-control" type="email" name="email" [class.invalid]=""
+      formControlName="email">
+      <div
+      *ngIf="">
+      <small
+          *ngIf="('email').invalid && ('email').touched"
+          class="text-danger"> *Email is required</small>
+  </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-3">
+  <div class="form-group">
+      <label>Proxy Caller Address</label>
+      <input class="form-control" type="email" name="email" [class.invalid]=""
+      formControlName="email">
+      <div
+      *ngIf="">
+      <small
+          *ngIf="('email').invalid && ('email').touched"
+          class="text-danger"> *Email is required</small>
+  </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-3">
+  <div class="form-group">
+      <label>Pin</label>
+      <input class="form-control" type="email" name="email" [class.invalid]=""
+      formControlName="email">
+      <div
+      *ngIf="">
+      <small
+          *ngIf="('email').invalid && ('email').touched"
+          class="text-danger"> *Email is required</small>
+  </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-3">
+  <div class="form-group">
+      <label>PO/VILL/PS</label>
+      <input class="form-control" type="email" name="email" [class.invalid]=""
+      formControlName="email">
+      <div
+      *ngIf="">
+      <small
+          *ngIf="('email').invalid && ('email').touched"
+          class="text-danger"> *Email is required</small>
+  </div>
+  </div>
+</div>
+<div class="col-sm-6 col-md-3">
+  <div class="form-group">
+      <label>District</label>
+      <input class="form-control" type="email" name="email" [class.invalid]=""
+      formControlName="email">
+      <div
+      *ngIf="">
+      <small
+          *ngIf="('email').invalid && ('email').touched"
+          class="text-danger"> *Email is required</small>
+  </div>
+  </div>
+</div>
+                  <div class="col-sm-6 col-md-3">
+                      <div class="form-group">
+                          <label>State</label>
+                          <input class="form-control" type="email" name="email" [class.invalid]=""
+                          formControlName="email">
+                          <div
+                          *ngIf="">
+                          <small
+                              *ngIf="('email').invalid && ('email').touched"
+                              class="text-danger"> *Email is required</small>
+                      </div>
+                      </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                    <div class="form-group">
+                        <label>Initiated?</label>
+                        <input class="form-control" type="email" name="email" [class.invalid]=""
+                        formControlName="email">
+                        <div
+                        *ngIf="">
+                        <small
+                            *ngIf="('email').invalid && ('email').touched"
+                            class="text-danger"> *Email is required</small>
+                    </div>
+                    </div>
+                </div>
+
+
+
+
+                  <div class="col-sm-6 col-md-3">
+                      <div class="form-group">
+                          <label>Nibedon date <span class="text-danger">*</span></label>
+                          <div class="cal-icon">
+                              <input class="form-control datetimepicker" type="text" name=""
+                              bsDatepicker type="text" [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"formControlName="invoice_date">
+                              <div
+                              *ngIf="">
+                              <small
+                                  *ngIf="('invoice_date').invalid && ('invoice_date').touched"
+                                  class="text-danger"> *Invoice date is required</small>
+                          </div>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Nibedon Details</label>
+                        <textarea class="form-control" [class.invalid]="('other_information') && ('other_information')"
+                        formControlName="other_information"></textarea>
+                        <div
+                        *ngIf="('other_information') && ('other_information')">
+                        <small
+                            *ngIf="('other_information').invalid && ('other_information').touched"
+                            class="text-danger"> *Other information is required</small>
+                    </div>
+                    </div>
+                </div>
+            </div>
+              <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                      <div class="table-responsive">
+                          <table class="table table-hover table-white">
+                              <thead>
+                                  <tr>
+
+                                  </tr>
+                              </thead>
+                                <tbody formArrayName="items">
+
+                                  <tr *ngFor="let item of ('items')['controls']; let i=index" [formGroupName]="i">
+
+                                          <td></td>
+                                          <td>
+
+                                          </td>
+                                          <td>
+
+                                          </td>
+                                          <td>
+
+                                          </td>
+                                          <td>
+
+                                          </td>
+                                          <td>
+
+                                          </td>
+                                          <td>
+
+                                          </td>
+
+                                  </tr>
+
+
+                              </tbody>
+                          </table>
+                      </div>
+
+
+                      <div class="table-responsive">
+                          <table class="table table-hover table-white">
+                              <tbody>
+                                  <tr>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td ></td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+
+
+                                  </tr>
+                                  <tr>
+                                    <td> Nibedon Recording- Work in Progress</td>
+                               <td> <audio controls>
+                                  <source src="/Audio/WhatsApp Audio 2023-01-04 at 19.56.39.mp4"type="audio/mp4">
+                                </audio>
+                              </td>
+
+
+
+
+                                  </tr>
+                                  <tr>
+                                      <td colspan="5" style="text-align: right; font-weight: bold">
+
+                                      </td>
+                                                                        </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label>Other Information</label>
+                                  <textarea class="form-control" [class.invalid]="('other_information') && ('other_information')"
+                                  formControlName="other_information"></textarea>
+                                  <div
+                                  *ngIf="('other_information') && ('other_information')">
+                                  <small
+                                      *ngIf="('other_information').invalid && ('other_information').touched"
+                                      class="text-danger"> *Other information is required</small>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+              <div class="submit-section" *ngIf="!id">
+                  <button class="btn btn-primary submit-btn m-r-10" (click)="savesend()">Save & Send</button>
+                  <button class="btn btn-primary submit-btn" (click)="savesend()">Save</button>
+              </div>
+              <div class="submit-section" *ngIf="id">
+                  <button class="btn btn-primary submit-btn">Save</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+

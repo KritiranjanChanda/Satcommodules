@@ -1,0 +1,66 @@
+[
+    {
+        "name" : "Shubon",
+        "role" : "Admin_Satcom",
+        "type" : "Admin",
+        "number" : "9863331543",
+        "email": "shubon_Admin@satcom",
+        "id" : 121
+    },
+    {
+        "name" : "Tultul",
+        "role" : "Satcom_Admin",
+        "type" : "client",
+        "number" : "9863331542",
+        "email": "Satcom Admin",
+        "id" : 122
+    },
+    {
+        "name" : "Bhargav Chakravarty",
+        "role" : "Medical",
+        "type" : "staff",
+        "number" : "9863331546",
+        "email": "Medical",
+        "id" : 124
+    },
+    {
+        "name" : "Kishan",
+        "role" : "Satcom_Admin",
+        "type" : "company",
+        "number" : "9863331547",
+        "email": "Satcom Admin",
+        "id" : 125
+    },
+    {
+        "name" : "Ritam",
+        "role" : "Accomodation",
+        "type" : "client",
+        "number" : "9863331548",
+        "email": "Accomodation",
+        "id" : 126
+    },
+    {
+        "name" : "Bablu Dash",
+        "role" : "Philanthropy",
+        "type" : "company",
+        "number" : "9863331542",
+        "email": "Philanthropy",
+        "id" : 127
+    },
+    {
+        "name" : "Bhargo",
+        "role" : "Satcom_Admin",
+        "type" : "staff",
+        "number" : "9863331543",
+        "email": "Satcom Admin",
+        "id" : 128
+    },
+    {
+        "name" : "Sandip",
+        "role" : "Education",
+        "type" : "company",
+        "number" : "9863331548",
+        "email": "Education",
+        "id" : 129
+    }
+]

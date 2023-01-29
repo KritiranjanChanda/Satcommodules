@@ -1,0 +1,177 @@
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-inner slimscroll">
+        <perfect-scrollbar [scrollIndicators]="false">
+            <div id="sidebar-menu" class="sidebar-menu">
+                <ul *ngIf="sidebarMenus.default">
+                    <li class="menu-title">
+                        <span>Main</span>
+                    </li>
+                    <li class="submenu" [ngClass]="{ 'active' : urlComplete.mainUrl === 'dashboard' }">
+                        <a href="javascript:" [ngClass]="{ 'subdrop' : urlComplete.mainUrl === 'dashboard' }">
+                            <i class="la la-dashboard"></i>
+                            <span>Dashboard</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul style="display: none;"
+                            [ngStyle]="{ 'display' : urlComplete.mainUrl === 'dashboard' ? 'block' : 'none' }">
+                            <li routerLink="/dashboard/admin"><a
+                                    [ngClass]="{ 'active' : urlComplete.subUrl === 'admin' }" href="javascript:">Admin
+                                    Dashboard</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="submenu" [ngClass]="{ 'active' : urlComplete.mainUrl === 'apps' }">
+                        <a href="javascript:" [ngClass]="{ 'subdrop' : urlComplete.mainUrl === 'apps' }">
+                            <i class="la la-cube"></i>
+                            <span> Admin Activities</span>
+                            <span class="menu-arrow"></span></a>
+                        <ul style="display: none;"
+                            [ngStyle]="{ 'display' : urlComplete.mainUrl === 'apps' ? 'block' : 'none' }">
+                            <li routerLink="/apps/chat"><a href="javascript:">Chat</a></li>
+                            <li class="submenu"  [ngClass]="{ 'active' : urlComplete.mainUrl === 'calls' }">
+                                <a href="javascript:" [ngClass]="{ 'subdrop' : urlComplete.subUrl === 'calls' }">
+                                    <span> Calls</span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul style="display: none;"
+                                    [ngStyle]="{ 'display' : urlComplete.subUrl === 'calls' ? 'block' : 'none' }">
+                                    <li routerLink="/apps/calls/voice">
+                                        <a [ngClass]="{ 'active' : urlComplete.childUrl === 'voice' }"
+                                            href="javascript:">Voice Call</a>
+                                    </li>
+                                    <li routerLink="/apps/calls/video">
+                                        <a [ngClass]="{ 'active' : urlComplete.childUrl === 'video' }"
+                                            href="javascript:">Video Call</a>
+                                    </li>
+                                    <li routerLink="/apps/calls/outgoing">
+                                        <a [ngClass]="{ 'active' : urlComplete.childUrl === 'outgoing' }"
+                                            href="javascript:">Outgoing Call</a>
+                                    </li>
+                                    <li routerLink="/apps/calls/incoming">
+                                        <a [ngClass]="{ 'active' : urlComplete.childUrl === 'incoming' }"
+                                            href="javascript:">Incoming Call</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li routerLink="/apps/calendar">
+                                <a href="javascript:"
+                                    [ngClass]="{ 'active' : urlComplete.subUrl === 'calendar' }">Calendar</a>
+                            </li>
+                            <li routerLink="/apps/contacts">
+                                <a href="javascript:"
+                                    [ngClass]="{ 'active' : urlComplete.subUrl === 'contacts' }">Contacts</a>
+                            </li>
+                            <li routerLink="/apps/email">
+                                <a href="javascript:"
+                                    [ngClass]="{ 'active' : urlComplete.subUrl === 'email' }">Email</a>
+                            </li>
+
+
+
+                        </ul>
+                    </li>
+                    <li class="menu-title">
+                        <span>Admin Utility</span>
+                    </li>
+
+
+
+                    <li [ngClass]="{'active' : urlComplete.subUrl === 'Responsepending'}">
+                        <a routerLink="/Responsepending/Responsependingcontent"><i
+                                class="la la-user-secret"></i> <span>Response Pending</span></a>
+                    </li>
+                    <li [ngClass]="{'active' : urlComplete.subUrl === 'Calleridcontent' || urlComplete.subUrl === 'Calleridview'}">
+                      <a routerLink="/Callerid/Calleridcontent" ><i
+                              class="la la-ticket"></i> <span>Caller ID</span></a>
+                  </li>
+
+                  <li [ngClass]="{'active' : urlComplete.subUrl === 'NibFormcontent' || urlComplete.subUrl === 'NibFormview'}">
+                    <a routerLink="/NibForm/NibFormcontent" ><i
+                            class="la la-ticket"></i> <span>Nibedon Form</span></a>
+                </li>
+
+                  <li [ngClass]="{'active' : urlComplete.subUrl === 'Misscallcontent' || urlComplete.subUrl === 'Misscallview'}">
+                    <a routerLink="/Misscall/Misscallcontent" ><i
+                            class="la la-ticket"></i> <span>Miss Call ID</span></a>
+                </li>
+
+                <li [ngClass]="{'active' : urlComplete.subUrl === 'Solvercontent' || urlComplete.subUrl === 'Solverview'}">
+                  <a routerLink="/Solver/Solvercontent" ><i
+                          class="la la-ticket"></i> <span>Solver Console</span></a>
+              </li>
+
+              <li [ngClass]="{'active' : urlComplete.subUrl === 'Livecallscontent' || urlComplete.subUrl === 'Livecallsview'}">
+                <a routerLink="/Livecalls/Livecallscontent" ><i
+                        class="la la-ticket"></i> <span>Livecalls Console</span></a>
+            </li>
+
+
+
+                    <li [ngClass]="{'active' : urlComplete.subUrl === 'nibassigncontent' || urlComplete.subUrl === 'nibassignview'}">
+                      <a routerLink="/nibassign/nibassigncontent" ><i
+                              class="la la-ticket"></i> <span>Nibedon Assign</span></a>
+                  </li>
+
+                  <li [ngClass]="{'active' : urlComplete.subUrl === 'Gnibccontent' || urlComplete.subUrl === 'Gnibcview'}">
+                    <a routerLink="/Gnibc/Gnibccontent" ><i
+                            class="la la-ticket"></i> <span>Generated Nib Code</span></a>
+                </li>
+
+                <li [ngClass]="{ 'active' : urlComplete.subUrl === 'clientspage' || urlComplete.subUrl === 'clientslist' }">
+                  <a routerLink="/clients/clientspage" ><i
+                          class="la la-users"></i> <span>Call Recording</span></a>
+              </li>
+
+              <li routerLink="/employees/holidays">
+                <a href="javascript:"
+                    [ngClass]="{ 'active' : urlComplete.subUrl === 'holidays'}"><i
+                    class="la la-users"></i> <span>Ocassion List</span></a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </ul>
+                <ul *ngIf="sidebarMenus.chat">
+                    <li routerLink="/dashboard/admin">
+                        <a href="javascript:"><i class="la la-home"></i> <span>Back to Home</span></a>
+                    </li>
+                    <li class="menu-title"><span>Chat Groups</span> <a href="javascript:" data-toggle="modal"
+                            data-target="#add_group"><i class="la la-plus"></i></a></li>
+                    <li>
+                        <a href="javascript:" *ngFor="let item of groups.total">
+                            <span class="chat-avatar-sm user-img">
+                                <img class="rounded-circle" alt="" src="assets/img/profiles/avatar-5.jpg">
+                            </span>
+                            <span class="chat-user">#{{ item | titlecase }}</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Direct Chats <a  data-toggle="modal" data-target="#add_chat_user"><i
+                                class="la la-plus"></i></a></li>
+                    <li [ngClass]="{ 'active' : members.active == item.name }" (click)="setActive(item.name)"
+                        *ngFor="let item of members.total">
+                        <a href="javascript:">
+                            <span class="chat-avatar-sm user-img">
+                                <img class="rounded-circle" alt="" src="assets/img/profiles/avatar-5.jpg"><span
+                                    class="status online"></span>
+                            </span>
+                            <span class="chat-user">{{item.name}}</span> <span class="badge badge-pill bg-danger"
+                                [hidden]="item.count < 1">{{item.count}}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </perfect-scrollbar>
+    </div>
+</div>
+<!-- /Sidebar -->

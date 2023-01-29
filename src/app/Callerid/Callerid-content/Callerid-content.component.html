@@ -1,0 +1,429 @@
+
+<!-- Page Content -->
+<div class="content container-fluid">
+
+  <!-- Page Header -->
+  <div class="page-header">
+      <div class="row align-items-center">
+          <div class="col">
+              <h3 class="page-title">Caller ID Page</h3>
+              <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Caller ID</li>
+              </ul>
+          </div>
+
+      </div>
+  </div>
+  <!-- /Page Header -->
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="card-group m-b-30">
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between mb-3">
+                          <div>
+                              <span class="d-block">INCOMING</span>
+                          </div>
+                          <div>
+                              <span class="text-success">+2</span>
+                          </div>
+                      </div>
+                      <h3 class="mb-3">25</h3>
+                      <div class="progress mb-2" style="height: 5px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"
+                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between mb-3">
+                          <div>
+                              <span class="d-block">NIBEDON</span>
+                          </div>
+                          <div>
+                              <span class="text-success">+5</span>
+                          </div>
+                      </div>
+                      <h3 class="mb-3">30</h3>
+                      <div class="progress mb-2" style="height: 5px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"
+                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between mb-3">
+                          <div>
+                              <span class="d-block">GENERAL
+                              </span>
+                          </div>
+                          <div>
+                              <span class="text-success">+10</span>
+                          </div>
+                      </div>
+                      <h3 class="mb-3">50</h3>
+                      <div class="progress mb-2" style="height: 5px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"
+                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="card">
+                  <div class="card-body">
+                      <div class="d-flex justify-content-between mb-3">
+                          <div>
+                              <span class="d-block">TOTAL CALLS HANDLED
+                              </span>
+                          </div>
+                          <div>
+                              <span class="text-success">+10</span>
+                          </div>
+                      </div>
+                      <h3 class="mb-3">125</h3>
+                      <div class="progress mb-2" style="height: 5px;">
+                          <div class="progress-bar bg-primary" role="progressbar" style="width: 70%;"
+                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Search Filter -->
+  <div class="row filter-row">
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <input type="text" class="form-control floating" (input)="searchName($event.target.value)">
+              <label class="focus-label">Nib Search</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus select-focus">
+              <select class="select floating form-control" (input)="searchStatus($event.target.value)">
+                  <option value=""> -- Select -- </option>
+                  <option value="New"> New </option>
+                  <option value="Solver">  Solver Team </option>
+                  <option value="Response">  Response Team </option>
+
+              </select>
+              <label class="focus-label">Pending With</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus select-focus">
+              <select class="select floating form-control" (input)="searchPriority($event.target.value)">
+                  <option value=""> -- Select -- </option>
+                  <option value="High"> High </option>
+                  <option value="Normal"> Normal </option>
+
+              </select>
+              <label class="focus-label">Priority</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <div class="cal-icon">
+                  <input class="form-control floating datetimepicker" bsDatepicker type="text"
+                      [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
+                      (bsValueChange)="searchFrom($event)">
+              </div>
+              <label class="focus-label">From</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <div class="cal-icon">
+                  <input class="form-control floating datetimepicker" bsDatepicker type="text"
+                      [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
+                      (bsValueChange)="searchTo($event)">
+              </div>
+              <label class="focus-label">To</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <a class="btn btn-success btn-block"> Search </a>
+      </div>
+  </div>
+  <!-- /Search Filter -->
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="table-responsive">
+              <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                  class="table table-striped custom-table mb-0 datatable">
+                  <thead>
+                      <tr>
+                        <th><input type="checkbox" name="" id=""></th>
+                          <th>Date & Time</th>
+                          <th>Nibedon Id</th>
+                          <th class="text-center">Name</th>
+                          <th>Contact No</th>
+                          <th>Category</th>
+                          <th>Pending With</th>
+                          <th class="text-center">Priority</th>
+                          <th class="text-center">Status</th>
+                          <th class="text-right">Assign</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><input type="checkbox" name="" id=""></td>
+                          <td>01/13/23 16:32</td>
+                          <td>NIB1342</td>
+                          <td>Prasannadep Das</td>
+                          <td>8006464672</td>
+                          <td>Education</td>
+                          <td class="text-center">Solver</td>
+                          <td>
+                              <div class="dropdown action-label">
+                                  <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                      aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                      <a class="dropdown-item" (click)="getStatus('High')"><i
+                                              class="fa fa-dot-circle-o text-danger"></i>
+                                          High</a>
+                                      <a class="dropdown-item" (click)="getStatus('Normal')"><i
+                                              class="fa fa-dot-circle-o text-warning"></i> Normal</a>
+
+                                  </div>
+                              </div>
+                          </td>
+                          <td class="text-center">
+                              <div class="dropdown action-label">
+                                  <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                      aria-expanded="false">
+                                      <i class="fa fa-dot-circle-o text-danger"></i> New
+                                  </a>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                      <a class="dropdown-item" (click)="getStatus('Open')"><i
+                                              class="fa fa-dot-circle-o text-info"></i>
+                                          Assigned</a>
+
+                                  </div>
+                              </div>
+                          </td>
+                          <td class="text-right">
+                              <div class="dropdown dropdown-action">
+                                  <a class="action-icon dropdown-toggle" data-toggle="dropdown"
+                                      aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                      <a class="dropdown-item" data-toggle="modal"
+                                          (click)="edit"><i class="fa fa-pencil m-r-5"></i>Solver Team</a>
+                                      <a class="dropdown-item" data-toggle="modal"
+                                          ><i class="fa fa-pencil m-r-5"></i> Response Team</a>
+                                  </div>
+                              </div>
+                          </td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td>01/13/23 16:32</td>
+                        <td>NIB1342</td>
+                        <td>Prasannadep Das</td>
+                        <td>8006464672</td>
+                        <td>Education</td>
+                        <td class="text-center">Solver</td>
+                        <td>
+                            <div class="dropdown action-label">
+                                <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" (click)="getStatus('High')"><i
+                                            class="fa fa-dot-circle-o text-danger"></i>
+                                        High</a>
+                                    <a class="dropdown-item" (click)="getStatus('Normal')"><i
+                                            class="fa fa-dot-circle-o text-warning"></i> Normal</a>
+
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-center">
+                            <div class="dropdown action-label">
+                                <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false">
+                                    <i class="fa fa-dot-circle-o text-danger"></i> New
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" (click)="getStatus('Open')"><i
+                                            class="fa fa-dot-circle-o text-info"></i>
+                                        Assigned</a>
+
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                            <div class="dropdown dropdown-action">
+                                <a class="action-icon dropdown-toggle" data-toggle="dropdown"
+                                    aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" data-toggle="modal"
+                                        (click)="edit"><i class="fa fa-pencil m-r-5"></i>Solver Team</a>
+                                    <a class="dropdown-item" data-toggle="modal"
+                                        ><i class="fa fa-trash-o m-r-5"></i> Response Team</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" name="" id=""></td>
+                      <td>01/13/23 16:32</td>
+                      <td>NIB1342</td>
+                      <td>Prasannadep Das</td>
+                      <td>8006464672</td>
+                      <td>Education</td>
+                      <td class="text-center">Solver</td>
+                      <td>
+                          <div class="dropdown action-label">
+                              <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                  aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" (click)="getStatus('High')"><i
+                                          class="fa fa-dot-circle-o text-danger"></i>
+                                      High</a>
+                                  <a class="dropdown-item" (click)="getStatus('Normal')"><i
+                                          class="fa fa-dot-circle-o text-warning"></i> Normal</a>
+
+                              </div>
+                          </div>
+                      </td>
+                      <td class="text-center">
+                          <div class="dropdown action-label">
+                              <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                  aria-expanded="false">
+                                  <i class="fa fa-dot-circle-o text-danger"></i> New
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" (click)="getStatus('Open')"><i
+                                          class="fa fa-dot-circle-o text-info"></i>
+                                      Assigned</a>
+
+                              </div>
+                          </div>
+                      </td>
+                      <td class="text-right">
+                          <div class="dropdown dropdown-action">
+                              <a class="action-icon dropdown-toggle" data-toggle="dropdown"
+                                  aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                  <a class="dropdown-item" data-toggle="modal"
+                                      (click)="edit"><i class="fa fa-pencil m-r-5"></i>Solver Team</a>
+                                  <a class="dropdown-item" data-toggle="modal"
+                                      ><i class="fa fa-trash-o m-r-5"></i> Response Team</a>
+                              </div>
+                          </div>
+                      </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" name="" id=""></td>
+                    <td>01/13/23 16:32</td>
+                    <td>NIB1342</td>
+                    <td>Prasannadep Das</td>
+                    <td>8006464672</td>
+                    <td>Education</td>
+                    <td class="text-center">Solver</td>
+                    <td>
+                        <div class="dropdown action-label">
+                            <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" (click)="getStatus('High')"><i
+                                        class="fa fa-dot-circle-o text-danger"></i>
+                                    High</a>
+                                <a class="dropdown-item" (click)="getStatus('Normal')"><i
+                                        class="fa fa-dot-circle-o text-warning"></i> Normal</a>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center">
+                        <div class="dropdown action-label">
+                            <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa fa-dot-circle-o text-danger"></i> New
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" (click)="getStatus('Open')"><i
+                                        class="fa fa-dot-circle-o text-info"></i>
+                                    Assigned</a>
+
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="dropdown dropdown-action">
+                            <a class="action-icon dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" data-toggle="modal"
+                                    (click)="edit"><i class="fa fa-pencil m-r-5"></i>Solver Team</a>
+                                <a class="dropdown-item" data-toggle="modal"
+                                    ><i class="fa fa-trash-o m-r-5"></i> Response Team</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" name="" id=""></td>
+                  <td>01/13/23 16:32</td>
+                  <td>NIB1342</td>
+                  <td>Prasannadep Das</td>
+                  <td>8006464672</td>
+                  <td>Education</td>
+                  <td class="text-center">Solver</td>
+                  <td>
+                      <div class="dropdown action-label">
+                          <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                              aria-expanded="false"><i class="fa fa-dot-circle-o text-danger"></i> High </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" (click)="getStatus('High')"><i
+                                      class="fa fa-dot-circle-o text-danger"></i>
+                                  High</a>
+                              <a class="dropdown-item" (click)="getStatus('Normal')"><i
+                                      class="fa fa-dot-circle-o text-warning"></i> Normal</a>
+
+                          </div>
+                      </div>
+                  </td>
+                  <td class="text-center">
+                      <div class="dropdown action-label">
+                          <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" data-toggle="dropdown"
+                              aria-expanded="false">
+                              <i class="fa fa-dot-circle-o text-danger"></i> New
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" (click)="getStatus('Open')"><i
+                                      class="fa fa-dot-circle-o text-info"></i>
+                                  Assigned</a>
+
+                          </div>
+                      </div>
+                  </td>
+                  <td class="text-right">
+                      <div class="dropdown dropdown-action">
+                          <a class="action-icon dropdown-toggle" data-toggle="dropdown"
+                              aria-expanded="false"><i class="material-icons">more_vert</i></a>
+                          <div class="dropdown-menu dropdown-menu-right">
+                              <a class="dropdown-item" data-toggle="modal"
+                                  (click)="edit"><i class="fa fa-pencil m-r-5"></i>Solver Team</a>
+                              <a class="dropdown-item" data-toggle="modal"
+                                  ><i class="fa fa-trash-o m-r-5"></i> Response Team</a>
+                          </div>
+                      </div>
+                  </td>
+              </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- /Page Content -->
+

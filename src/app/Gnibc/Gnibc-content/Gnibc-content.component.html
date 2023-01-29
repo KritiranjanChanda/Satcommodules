@@ -1,0 +1,143 @@
+
+<!-- Page Content -->
+<div class="content container-fluid">
+
+  <!-- Page Header -->
+  <div class="page-header">
+      <div class="row align-items-center">
+          <div class="col">
+              <h3 class="page-title">Generated Nibedon IDs</h3>
+              <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active">Generated Nibedon Codes</li>
+              </ul>
+          </div>
+
+      </div>
+  </div>
+  <!-- /Page Header -->
+
+
+  <!-- Search Filter -->
+  <div class="row filter-row">
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <input type="text" class="form-control floating" (input)="searchName($event.target.value)">
+              <label class="focus-label">Nib Search</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus select-focus">
+              <select class="select floating form-control" (input)="searchStatus($event.target.value)">
+                  <option value=""> -- Select -- </option>
+                  <option value="Pending"> Pending </option>
+                  <option value="Completed">  Completed </option>
+
+
+              </select>
+              <label class="focus-label">NIB Status</label>
+          </div>
+      </div>
+
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <div class="cal-icon">
+                  <input class="form-control floating datetimepicker" bsDatepicker type="text"
+                      [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
+                      (bsValueChange)="searchFrom($event)">
+              </div>
+              <label class="focus-label">From</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <div class="form-group form-focus">
+              <div class="cal-icon">
+                  <input class="form-control floating datetimepicker" bsDatepicker type="text"
+                      [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY',  returnFocusToInput: true }"
+                      (bsValueChange)="searchTo($event)">
+              </div>
+              <label class="focus-label">To</label>
+          </div>
+      </div>
+      <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
+          <a class="btn btn-success btn-block"> Search </a>
+      </div>
+  </div>
+  <!-- /Search Filter -->
+
+  <div class="row">
+      <div class="col-md-12">
+          <div class="table-responsive">
+              <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+                  class="table table-striped custom-table mb-0 datatable">
+                  <thead>
+                      <tr>
+                        <th>Sn</th>
+                          <th>NIB Code</th>
+                          <th>Call By</th>
+                          <th>Time</th>
+                          <th>Status</th>
+                          <th>Pending With</th>
+
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>NIB1234</td>
+                          <td>Shubon</td>
+                          <td>09:21:27</td>
+                          <td>Pending</td>
+                          <td>Solver</td>
+
+                      </tr>
+
+                      <tr>
+                        <td>2</td>
+                        <td>NIB1234</td>
+                        <td>Shubon</td>
+                        <td>09:21:27</td>
+                        <td>Pending</td>
+                        <td>Solver</td>
+
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>NIB1234</td>
+                      <td>Shubon</td>
+                      <td>09:21:27</td>
+                      <td>Pending</td>
+                      <td>Solver</td>
+
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>NIB1234</td>
+                    <td>Shubon</td>
+                    <td>09:21:27</td>
+                    <td>Pending</td>
+                    <td>Solver</td>
+
+                </tr>
+
+                <tr>
+                  <td>5</td>
+                  <td>NIB1234</td>
+                  <td>Shubon</td>
+                  <td>09:21:27</td>
+                  <td>Pending</td>
+                  <td>Solver</td>
+
+              </tr>
+
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- /Page Content -->
+
